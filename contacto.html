@@ -11,7 +11,10 @@
     <meta property="og:title" content="Contacto - DAFOR">
     <meta property="og:description" content="Ponte en contacto con nosotros. Estamos listos para hacer realidad tu proyecto.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tu-usuario.github.io/tu-repositorio/contacto.html"> <meta property="og:image" content="https://tu-usuario.github.io/tu-repositorio/imagen-whatsapp.jpg"> <link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:url" content="https://jadavilar.github.io/dafor/contacto.html"> 
+    <meta property="og:image" content="https://jadavilar.github.io/dafor/imagen-whatsapp.jpg"> 
+
+    <link rel="icon" type="image/png" href="favicon.png">
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -23,7 +26,10 @@
             <div class="logo-area">
                 <img src="logo-menu.png" alt="DAFOR Logo" class="logo-img">
             </div>
-            <nav class="main-nav">
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="main-nav" id="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contacto.html" class="active">Contacto</a></li>
@@ -89,6 +95,7 @@
     </a>
 
     <script>
+        // Efecto Scroll del menú superior
         window.addEventListener('scroll', function() {
             const header = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -96,6 +103,15 @@
             } else {
                 header.classList.remove('scrolled');
             }
+        });
+
+        // Funcionalidad del Menú Hamburguesa
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
     </script>
 </body>
