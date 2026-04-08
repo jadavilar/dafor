@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DAFOR - Inversiones y Construcciones en Quito</title>
+    <meta name="description" content="DAFOR es tu socio de confianza en inversiones y construcción en Quito, Ecuador. Más de 30 años construyendo el futuro con calidad, responsabilidad y sostenibilidad.">
+    <meta name="keywords" content="construcción, inversiones, inmobiliaria, proyectos, edificación, DAFOR, Quito, Ecuador">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="DAFOR - Inversiones y Construcciones">
+    <meta property="og:description" content="Construyendo el futuro, hoy. Calidad y responsabilidad en cada obra.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-usuario.github.io/tu-repositorio/">
+    <meta property="og:image" content="https://tu-usuario.github.io/tu-repositorio/logo-banner.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head><body>
+
+    <header class="main-header" id="navbar">
+        <div class="container header-container">
+            <div class="logo-area">
+                <img src="logo-menu.png" alt="DAFOR Logo" class="logo-img">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section contact-hero">
+        <div class="hero-content container">
+            <h1>Contacta con Nosotros</h1>
+            <p>Estamos listos para hacer realidad tu proyecto.</p>
+        </div>
+    </section>
+
+    <section class="contact-form-section container">
+        <div class="form-wrapper">
+            <h2>Envíanos un mensaje</h2>
+            <p class="form-subtitle">Rellena el formulario y te responderemos a la brevedad posible.</p>
+            
+            <form action="https://formspree.io/f/xgopbeor" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="099 123 4567" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Tu Mensaje (Opcional)</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h4>DAFOR</h4>
+                <p>Tu socio de confianza en edificación.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-phone"></i> +593 99 949 6255</p>
+                <p><i class="fas fa-envelope"></i> alejandrod@dafor.com.ec</p>
+                <p><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 DAFOR. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/593999496255?text=Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construciones" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
