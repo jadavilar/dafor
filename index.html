@@ -17,7 +17,7 @@
 
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -27,9 +27,11 @@
             <div class="logo-area">
                 <img src="logo-menu.png" alt="DAFOR Logo" class="logo-img">
             </div>
-            <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
+            
+            <div class="menu-toggle" onclick="abrirMenu()">
                 <i class="fas fa-bars"></i>
             </div>
+            
             <nav class="main-nav" id="nav-menu">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -129,7 +131,7 @@
     </a>
 
     <script>
-        // Efecto Scroll
+        // Efecto Scroll del menú superior
         window.addEventListener('scroll', function() {
             const header = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -139,13 +141,13 @@
             }
         });
 
-        // Función directa para el botón
-        function toggleMenu() {
-            var nav = document.getElementById('nav-menu');
-            if (nav.style.display === 'block') {
-                nav.style.display = 'none';
+        // Función Infalible para el Menú
+        function abrirMenu() {
+            var menu = document.getElementById('nav-menu');
+            if (menu.classList.contains('menu-desplegado')) {
+                menu.classList.remove('menu-desplegado');
             } else {
-                nav.style.display = 'block';
+                menu.classList.add('menu-desplegado');
             }
         }
     </script>
