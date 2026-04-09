@@ -43,8 +43,8 @@ ul { list-style: none; }
 .main-nav a { font-weight: 500; color: var(--secondary-color); padding: 5px 0; transition: var(--transition); }
 .main-nav a:hover, .main-nav a.active { color: var(--primary-color); border-bottom: 2px solid var(--accent-color); }
 
-/* Botón Hamburguesa */
-.menu-toggle { display: none; font-size: 1.8rem; color: var(--primary-color); cursor: pointer; transition: var(--transition); padding: 10px; }
+.menu-toggle { display: none; }
+.close-menu { display: none; } /* Oculta la "X" en PC */
 
 /* ESTADO DEL HEADER AL HACER SCROLL */
 .main-header.scrolled { background-color: var(--primary-color); padding: 5px 0; }
@@ -68,11 +68,7 @@ ul { list-style: none; }
 .hero-content h1 { font-size: 2.2rem; font-weight: 800; margin-top: -10px; letter-spacing: -1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
 
 .scroll-down { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); font-size: 2rem; color: var(--accent-color); animation: bounce 2s infinite; }
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
-    40% { transform: translateY(-20px) translateX(-50%); }
-    60% { transform: translateY(-10px) translateX(-50%); }
-}
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); } 40% { transform: translateY(-20px) translateX(-50%); } 60% { transform: translateY(-10px) translateX(-50%); } }
 
 /* =============================================
    SECCIÓN ESTADÍSTICAS
@@ -134,25 +130,43 @@ ul { list-style: none; }
 .whatsapp-float:hover { background-color: #128c7e; transform: scale(1.1); color: #FFF; }
 
 /* =============================================
-   RESPONSIVE DESIGN (MÓVILES)
+   RESPONSIVE DESIGN (MÓVILES) - MENÚ LATERAL INFALIBLE
 ============================================== */
 @media (max-width: 768px) {
-    /* Menú Hamburguesa */
-    .menu-toggle { display: block; }
+    /* Configuración del Botón Hamburguesa */
+    .menu-toggle { display: block; background: transparent; border: none; font-size: 1.8rem; color: var(--primary-color); cursor: pointer; padding: 10px; }
     
+    /* Configuración del Botón X para cerrar */
+    .close-menu { display: block; position: absolute; top: 20px; right: 20px; font-size: 2rem; color: var(--accent-color); cursor: pointer; }
+
+    /* EL MENÚ LATERAL IZQUIERDO (OFF-CANVAS) */
     .main-nav { 
-        display: none; /* AQUÍ ESTÁ LA MAGIA: Quitamos el !important que bloqueaba tu celular */
-        position: absolute; top: 100%; left: 0; width: 100%; 
-        background-color: var(--text-light); padding: 20px 0; 
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
-        z-index: 9999;
+        position: fixed !important;
+        top: 0;
+        left: -100% !important; /* Totalmente escondido a la izquierda */
+        width: 75% !important; /* Ocupa el 75% de la pantalla del celular */
+        max-width: 300px;
+        height: 100vh !important;
+        background-color: var(--primary-color) !important;
+        padding: 80px 20px 20px 20px !important;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.5) !important;
+        z-index: 999999 !important;
+        transition: left 0.4s ease-in-out !important; /* Animación de deslizamiento */
+        display: block !important; /* NO usamos display: none, esto evita los fallos */
     }
 
-    .main-nav ul { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-    .main-header.scrolled .main-nav { background-color: var(--primary-color); }
-    .main-header.scrolled .main-nav a { color: var(--text-light); }
+    /* CLASE QUE ACTIVA LA APARICIÓN DEL MENÚ */
+    .main-nav.menu-abierto {
+        left: 0 !important; /* Trae el menú a la vista */
+    }
 
-    /* Ajustes Generales y Centrado Estricto */
+    /* Diseño interno del menú lateral */
+    .main-nav ul { flex-direction: column; align-items: flex-start; gap: 30px; }
+    .main-nav a { color: var(--text-light) !important; font-size: 1.2rem; width: 100%; display: block; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+    .main-nav a:hover, .main-nav a.active { color: var(--accent-color) !important; border-bottom-color: var(--accent-color); }
+    .main-header.scrolled .menu-toggle { color: var(--text-light); }
+
+    /* Ajustes Generales y Centrado Estricto (Resto intacto) */
     .container { width: 100% !important; padding: 0 15px !important; overflow-x: hidden; }
     .header-container { flex-wrap: nowrap; } 
     .logo-img { height: 40px; }
@@ -161,7 +175,7 @@ ul { list-style: none; }
     .hero-content { transform: translateY(-30px); width: 100%; text-align: center; } 
     .hero-content h1 { font-size: 1.8rem; margin-top: 0; padding: 0 10px; }
     
-    /* CORRECCIÓN DE ESTADÍSTICAS PARA MÓVIL (FUERZA BRUTA) */
+    /* CORRECCIÓN DE ESTADÍSTICAS PARA MÓVIL */
     .stats-section { padding: 50px 0; width: 100%; overflow: hidden; }
     .stats-layout { grid-template-columns: 1fr; gap: 30px; width: 100%; }
     .stats-image-wrapper { display: block; width: 100%; padding: 0 15px; }
@@ -170,7 +184,6 @@ ul { list-style: none; }
     .stats-content { width: 100%; padding: 0 15px; }
     .stats-grid-inline { width: 100%; }
 
-    /* Tarjetas: Apiladas, centradas y sin bordes laterales */
     .stat-item { 
         display: flex !important;
         flex-direction: column !important; 
@@ -194,6 +207,5 @@ ul { list-style: none; }
     .footer-contact p { justify-content: center; }
     .form-wrapper { padding: 30px 15px; }
     
-    /* Ajuste de WhatsApp para móviles */
     .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; font-size: 30px; }
 }

@@ -16,7 +16,7 @@
 
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <link rel="stylesheet" href="style.css?v=100">
+    <link rel="stylesheet" href="style.css?v=FINAL">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -27,11 +27,14 @@
                 <img src="logo-menu.png" alt="DAFOR Logo" class="logo-img">
             </div>
             
-            <div class="menu-toggle" onclick="abrirMenu()">
+            <button class="menu-toggle" onclick="toggleMenuIzquierdo()">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
             
             <nav class="main-nav" id="nav-menu">
+                <div class="close-menu" onclick="toggleMenuIzquierdo()">
+                    <i class="fas fa-times"></i>
+                </div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contacto.html" class="active">Contacto</a></li>
@@ -92,7 +95,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/593999496255?text=Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construciones" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
+    <a href="https://wa.me/593999496255?text=Hola,Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construciones" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -106,14 +109,9 @@
             }
         });
 
-        // Este código inserta el comando directo para abrir el menú
-        function abrirMenu() {
+        function toggleMenuIzquierdo() {
             var menu = document.getElementById('nav-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
+            menu.classList.toggle('menu-abierto');
         }
     </script>
 </body>
