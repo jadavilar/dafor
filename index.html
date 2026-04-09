@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAFOR - Inversiones y Construcciones</title>
     
-    <meta name="description" content="DAFOR - Inversiones y Construcciones en Quito, Ecuador.">
+    <title>DAFOR - Inversiones y Construcciones en Quito</title>
+    <meta name="description" content="DAFOR es tu socio de confianza en inversiones y construcción en Quito, Ecuador. Más de 30 años construyendo el futuro con calidad, responsabilidad y sostenibilidad.">
+    <meta name="keywords" content="construcción, inversiones, inmobiliaria, proyectos, edificación, DAFOR, Quito, Ecuador">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="DAFOR - Inversiones y Construcciones">
+    <meta property="og:description" content="Construyendo el futuro, hoy. Calidad y responsabilidad en cada obra.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jadavilar.github.io/dafor/"> 
+    <meta property="og:image" content="https://jadavilar.github.io/dafor/imagen-whatsapp.jpg"> 
+
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <link rel="stylesheet" href="style.css?v=12">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -18,9 +27,11 @@
             <div class="logo-area">
                 <img src="logo-menu.png" alt="DAFOR Logo" class="logo-img">
             </div>
-            <button class="menu-toggle" onclick="controlarMenu()">
+            
+            <div class="menu-toggle" onclick="abrirMenu()">
                 <i class="fas fa-bars"></i>
-            </button>
+            </div>
+            
             <nav class="main-nav" id="nav-menu">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -32,7 +43,7 @@
 
     <section class="hero-section">
         <div class="hero-content container">
-            <img src="logo-banner.png" alt="DAFOR" class="hero-logo">
+            <img src="logo-banner.png" alt="DAFOR Construcciones" class="hero-logo">
             <h1>Construyendo el futuro, hoy.</h1>
         </div>
         <div class="scroll-down">
@@ -71,17 +82,17 @@
             <div class="value-item text-center">
                 <div class="value-icon"><i class="fas fa-award"></i></div>
                 <h3>Calidad</h3>
-                <p>Materiales y técnicas vanguardistas para acabados impecables.</p>
+                <p>Utilizamos los mejores materiales y técnicas vanguardistas para garantizar acabados impecables y duraderos en cada obra.</p>
             </div>
             <div class="value-item text-center">
                 <div class="value-icon"><i class="fas fa-hard-hat"></i></div>
                 <h3>Responsabilidad</h3>
-                <p>Cumplimos estrictamente con los plazos y normativas.</p>
+                <p>Cumplimos estrictamente con los plazos de entrega y las normativas de seguridad, priorizando la confianza de nuestros clientes.</p>
             </div>
             <div class="value-item text-center">
                 <div class="value-icon"><i class="fas fa-leaf"></i></div>
                 <h3>Sostenibilidad</h3>
-                <p>Soluciones eficientes para reducir el impacto ambiental.</p>
+                <p>Integramos prácticas eco-amigables y soluciones eficientes energéticamente para reducir el impacto ambiental.</p>
             </div>
         </div>
     </section>
@@ -92,7 +103,7 @@
             <div class="social-icons">
                 <a href="https://www.linkedin.com/company/dafor" target="_blank" class="social-icon li"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://www.facebook.com/dafor.ec" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/dafor.ec" target="_blank" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/dafor.ec?igsh=MTJxYWJqbnB0YXl4aA%3D%3D&utm_source=qr" target="_blank" class="social-icon ig"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </section>
@@ -115,20 +126,30 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/593999496255?text=Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/593999496255?text=Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construciones" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        function controlarMenu() {
-            var menu = document.getElementById('nav-menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-        }
+        // Efecto Scroll del menú superior
         window.addEventListener('scroll', function() {
             const header = document.getElementById('navbar');
-            if (window.scrollY > 50) header.classList.add('scrolled');
-            else header.classList.remove('scrolled');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
+
+        // Función Infalible para el Menú
+        function abrirMenu() {
+            var menu = document.getElementById('nav-menu');
+            if (menu.classList.contains('menu-desplegado')) {
+                menu.classList.remove('menu-desplegado');
+            } else {
+                menu.classList.add('menu-desplegado');
+            }
+        }
     </script>
 </body>
 </html>
