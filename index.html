@@ -3,18 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAFOR - Inversiones y Construcciones</title>
     
-    <title>DAFOR - Inversiones y Construcciones en Quito</title>
-    <meta name="description" content="DAFOR es tu socio de confianza en inversiones y construcción en Quito, Ecuador. Más de 30 años construyendo el futuro con calidad.">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="DAFOR - Inversiones y Construcciones">
-    <meta property="og:description" content="Construyendo el futuro, hoy. Calidad y responsabilidad en cada obra.">
-    <meta property="og:image" content="https://jadavilar.github.io/dafor/imagen-whatsapp.jpg"> 
-
+    <meta name="description" content="DAFOR - Inversiones y Construcciones en Quito, Ecuador.">
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <link rel="stylesheet" href="style.css?v=11">
+    <link rel="stylesheet" href="style.css?v=12">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -77,12 +71,12 @@
             <div class="value-item text-center">
                 <div class="value-icon"><i class="fas fa-award"></i></div>
                 <h3>Calidad</h3>
-                <p>Materiales y técnicas vanguardistas para acabados impecables en cada obra.</p>
+                <p>Materiales y técnicas vanguardistas para acabados impecables.</p>
             </div>
             <div class="value-item text-center">
                 <div class="value-icon"><i class="fas fa-hard-hat"></i></div>
                 <h3>Responsabilidad</h3>
-                <p>Cumplimos estrictamente con los plazos y normativas de seguridad.</p>
+                <p>Cumplimos estrictamente con los plazos y normativas.</p>
             </div>
             <div class="value-item text-center">
                 <div class="value-icon"><i class="fas fa-leaf"></i></div>
@@ -128,17 +122,12 @@
     <script>
         function controlarMenu() {
             var menu = document.getElementById('nav-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
-
         window.addEventListener('scroll', function() {
             const header = document.getElementById('navbar');
-            if (window.scrollY > 50) { header.classList.add('scrolled'); } 
-            else { header.classList.remove('scrolled'); }
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
         });
     </script>
 </body>

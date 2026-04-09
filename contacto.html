@@ -3,20 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Contacto - DAFOR</title>
-    <meta name="description" content="Ponte en contacto con DAFOR. Estamos listos para hacer realidad tu proyecto de inversión y construcción en Quito, Ecuador.">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="Contacto - DAFOR">
-    <meta property="og:description" content="Ponte en contacto con nosotros. Estamos listos para hacer realidad tu proyecto.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jadavilar.github.io/dafor/contacto.html"> 
-    <meta property="og:image" content="https://jadavilar.github.io/dafor/imagen-whatsapp.jpg"> 
-
     <link rel="icon" type="image/png" href="favicon.png">
-    
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=12">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -26,11 +15,9 @@
             <div class="logo-area">
                 <img src="logo-menu.png" alt="DAFOR Logo" class="logo-img">
             </div>
-            
-            <div class="menu-toggle" onclick="abrirMenu()">
+            <button class="menu-toggle" onclick="controlarMenu()">
                 <i class="fas fa-bars"></i>
-            </div>
-            
+            </button>
             <nav class="main-nav" id="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -50,24 +37,24 @@
     <section class="contact-form-section container">
         <div class="form-wrapper">
             <h2>Envíanos un mensaje</h2>
-            <p class="form-subtitle">Rellena el formulario y te responderemos a la brevedad posible.</p>
+            <p class="form-subtitle">Rellena el formulario y te responderemos a la brevedad.</p>
             
             <form action="https://formspree.io/f/xgopbeor" method="post" class="contact-form">
                 <div class="form-group">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                    <label>Nombre Completo</label>
+                    <input type="text" name="nombre" placeholder="Ej: Juan Pérez" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    <label>Correo Electrónico</label>
+                    <input type="email" name="email" placeholder="ejemplo@correo.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="099 123 4567" required>
+                    <label>Teléfono</label>
+                    <input type="tel" name="telefono" placeholder="099 949 6255" required>
                 </div>
                 <div class="form-group">
-                    <label for="mensaje">Tu Mensaje (Opcional)</label>
-                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                    <label>Tu Mensaje (Opcional)</label>
+                    <textarea name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Enviar Mensaje</button>
             </form>
@@ -92,29 +79,10 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/593999496255?text=Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construciones" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <script>
-        // Efecto Scroll del menú superior
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Función Infalible para el Menú
-        function abrirMenu() {
+        function controlarMenu() {
             var menu = document.getElementById('nav-menu');
-            if (menu.classList.contains('menu-desplegado')) {
-                menu.classList.remove('menu-desplegado');
-            } else {
-                menu.classList.add('menu-desplegado');
-            }
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
     </script>
 </body>
