@@ -17,7 +17,7 @@
 
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
             <div class="logo-area">
                 <img src="logo-menu.png" alt="DAFOR Logo" class="logo-img">
             </div>
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
             <nav class="main-nav" id="nav-menu">
@@ -129,7 +129,7 @@
     </a>
 
     <script>
-        // Efecto Scroll del menú superior
+        // Efecto Scroll
         window.addEventListener('scroll', function() {
             const header = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -139,25 +139,15 @@
             }
         });
 
-        // Funcionalidad Forzada del Menú Hamburguesa
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navMenu = document.getElementById('nav-menu');
-
-            if (mobileMenu && navMenu) {
-                mobileMenu.addEventListener('click', function(e) {
-                    e.preventDefault(); // Evita comportamientos raros del navegador
-                    navMenu.classList.toggle('active');
-                    
-                    // Inyección de estilo directo (¡Imposible que falle!)
-                    if (navMenu.classList.contains('active')) {
-                        navMenu.style.display = 'block';
-                    } else {
-                        navMenu.style.display = 'none';
-                    }
-                });
+        // Función directa para el botón
+        function toggleMenu() {
+            var nav = document.getElementById('nav-menu');
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'block';
             }
-        });
+        }
     </script>
 </body>
 </html>
