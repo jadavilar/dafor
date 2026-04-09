@@ -17,7 +17,7 @@
 
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=100">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -126,12 +126,11 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/593999496255?text=Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construciones" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
+    <a href="https://wa.me/593999496255?text=Hola,Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construciones" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        // Efecto Scroll del menú superior
         window.addEventListener('scroll', function() {
             const header = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -141,13 +140,13 @@
             }
         });
 
-        // Función Infalible para el Menú
+        // Este código inserta el comando directo para abrir el menú
         function abrirMenu() {
             var menu = document.getElementById('nav-menu');
-            if (menu.classList.contains('menu-desplegado')) {
-                menu.classList.remove('menu-desplegado');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
             } else {
-                menu.classList.add('menu-desplegado');
+                menu.style.display = 'block';
             }
         }
     </script>
