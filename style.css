@@ -209,3 +209,38 @@ ul { list-style: none; }
     
     .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; font-size: 30px; }
 }
+/* =============================================
+   EFECTO GLASSMORPHISM PARA BANNER PRINCIPAL (LOGOTIPO Y ESLOGAN)
+   (Añadido al final para no alterar el código original)
+============================================== */
+.hero-content {
+    /* 1. Fondo semitransparente para simular el vidrio (ahora más transparente) */
+    background-color: rgba(255, 255, 255, 0.10) !important;
+    
+    /* Ajuste de tamaño para que no vaya de extremo a extremo */
+    max-width: 600px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    
+    /* 2. El efecto de desenfoque del fondo (blur) */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important; /* Soporte para Safari */
+    
+    /* 3. Dar forma de panel de vidrio con bordes y relleno */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 40px !important;
+    
+    /* 4. Sombra suave para separarlo del fondo y dar relieve */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Ajuste específico para que el vidrio se vea bien en celulares */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 25px 15px !important;
+        width: 80% !important; /* Ahora es más estrecho en celulares también */
+        margin: 0 auto !important;
+        border-radius: 15px !important;
+    }
+}
