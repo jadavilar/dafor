@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyectos en venta | DAFOR Inversiones y Construcciones</title>
+    <meta name="description" content="Conoce los proyectos de vivienda de DAFOR en venta en Quito: departamentos en planos, en construcción y de entrega inmediata.">
+    <!-- Cambiar a "index, follow" cuando se publiquen los primeros proyectos -->
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#0F223A">
+    <link rel="canonical" href="https://dafor.com.ec/proyectos.html">
+
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DAFOR">
+    <meta property="og:title" content="Proyectos en venta | DAFOR">
+    <meta property="og:description" content="Departamentos y viviendas DAFOR en venta en Quito.">
+    <meta property="og:url" content="https://dafor.com.ec/proyectos.html">
+    <meta property="og:image" content="https://dafor.com.ec/images/imagen-whatsapp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=3.3">
+
+</head>
+<body>
+
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="DAFOR, ir al inicio">
+                <img src="images/logo-mark.png" alt="" width="395" height="469">
+                <span class="brand-text">
+                    <span class="brand-name">DAFOR</span>
+                    <span class="brand-sub">Inversiones y Construcciones</span>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" id="main-nav" aria-label="Menú principal">
+                <div class="nav-head">
+                    <img src="images/logo-mark.png" alt="DAFOR">
+                    <button class="menu-close" id="menu-close" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
+                </div>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="contacto.html?interes=comprar" data-proyectos-link class="active">Proyectos</a></li>
+                    <li><a href="index.html#valores">Valores</a></li>
+                    <li><a href="index.html#proceso">Proceso</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <main>
+        <section class="hero page-hero">
+            <div class="hero-bg" role="img" aria-label="Vista aérea del Parque La Carolina, Quito"></div>
+            <div class="container hero-content">
+                <nav class="breadcrumb reveal" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><span>Proyectos</span></nav>
+                <h1 class="reveal" data-delay="1">Nuestros <span>proyectos</span></h1>
+                <p class="lead reveal" data-delay="2">Viviendas desarrolladas y construidas por DAFOR en Quito. Encuentra tu nuevo hogar o una gran oportunidad de inversión.</p>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="container">
+                <div class="project-filters reveal" id="project-filters" role="tablist" aria-label="Filtrar proyectos">
+                    <button class="chip active" data-filter="todos">Todos</button>
+                    <button class="chip" data-filter="planos">En planos</button>
+                    <button class="chip" data-filter="construccion">En construcción</button>
+                    <button class="chip" data-filter="inmediata">Entrega inmediata</button>
+                </div>
+                <div class="projects-grid" id="projects-grid"></div>
+
+                <div class="projects-empty" id="projects-empty" hidden>
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <h2>Nuevos proyectos muy pronto</h2>
+                    <p>Estamos preparando nuestros próximos desarrollos. Déjanos tus datos y sé el primero en conocer la disponibilidad y los precios de preventa.</p>
+                    <a href="contacto.html?interes=comprar" class="btn btn-primary">Quiero información <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box reveal">
+                    <div>
+                        <span class="eyebrow light">¿Tienes un terreno?</span>
+                        <h2>También construimos tu proyecto</h2>
+                        <p>Diseño, planificación y construcción llave en mano en tu propio terreno.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="contacto.html?interes=construir" class="btn btn-primary">Cotiza tu construcción <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="images/logo-blanco.png" alt="DAFOR Inversiones y Construcciones">
+                <p>Proyectos inmobiliarios propios y construcción en tu terreno, en Quito, Ecuador.</p>
+            </div>
+            <div>
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="contacto.html?interes=comprar" data-proyectos-link>Proyectos</a></li>
+                    <li><a href="index.html#valores">Valores</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i><a href="tel:+593999496255">+593 99 949 6255</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:alejandrod@dafor.com.ec">alejandrod@dafor.com.ec</a></li>
+                    <li><i class="fas fa-location-dot"></i><span>Quito, Ecuador</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <div class="social">
+                    <a href="https://www.linkedin.com/company/dafor" target="_blank" rel="noopener" aria-label="LinkedIn de DAFOR"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/dafor.ec" target="_blank" rel="noopener" aria-label="Facebook de DAFOR"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/dafor.ec" target="_blank" rel="noopener" aria-label="Instagram de DAFOR"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span data-year>2026</span> DAFOR Inversiones y Construcciones. Todos los derechos reservados.</p>
+            <p>Quito, Ecuador</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/593999496255?text=Hola%2C%20tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construcciones" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/proyectos-data.js?v=3.3"></script>
+    <script src="js/proyectos.js?v=3.3"></script>
+    <script src="js/script.js?v=3.3"></script>
+</body>
+</html>

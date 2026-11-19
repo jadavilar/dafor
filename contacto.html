@@ -1,118 +1,198 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Contacto - DAFOR</title>
+
+    <title>Contacto | DAFOR Inversiones y Construcciones</title>
     <meta name="description" content="Ponte en contacto con DAFOR. Estamos listos para hacer realidad tu proyecto de inversión y construcción en Quito, Ecuador.">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0F223A">
+    <link rel="canonical" href="https://dafor.com.ec/contacto.html">
 
-    <meta property="og:title" content="Contacto - DAFOR">
-    <meta property="og:description" content="Ponte en contacto con nosotros. Estamos listos para hacer realidad tu proyecto.">
+    <meta property="og:locale" content="es_EC">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jadavilar.github.io/dafor/contacto.html"> 
-    <meta property="og:image" content="https://jadavilar.github.io/dafor/imagen-whatsapp.jpg"> 
+    <meta property="og:site_name" content="DAFOR">
+    <meta property="og:title" content="Contacto | DAFOR">
+    <meta property="og:description" content="Ponte en contacto con nosotros. Estamos listos para hacer realidad tu proyecto.">
+    <meta property="og:url" content="https://dafor.com.ec/contacto.html">
+    <meta property="og:image" content="https://dafor.com.ec/images/imagen-whatsapp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <link rel="stylesheet" href="style.css?v=FINAL">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=3.3">
+
 </head>
 <body>
 
-    <header class="main-header" id="navbar">
-        <div class="container header-container">
-            <div class="logo-area">
-                <img src="logo-menu.png" alt="DAFOR Logo" class="logo-img">
-            </div>
-            
-            <button class="menu-toggle" onclick="toggleMenuIzquierdo()">
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="DAFOR, ir al inicio">
+                <img src="images/logo-mark.png" alt="" width="395" height="469">
+                <span class="brand-text">
+                    <span class="brand-name">DAFOR</span>
+                    <span class="brand-sub">Inversiones y Construcciones</span>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
                 <i class="fas fa-bars"></i>
             </button>
-            
-            <nav class="main-nav" id="nav-menu">
-                <div class="close-menu" onclick="toggleMenuIzquierdo()">
-                    <i class="fas fa-times"></i>
+
+            <nav class="main-nav" id="main-nav" aria-label="Menú principal">
+                <div class="nav-head">
+                    <img src="images/logo-mark.png" alt="DAFOR">
+                    <button class="menu-close" id="menu-close" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
                 </div>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="contacto.html?interes=comprar" data-proyectos-link>Proyectos</a></li>
+                    <li><a href="index.html#valores">Valores</a></li>
+                    <li><a href="index.html#proceso">Proceso</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary" aria-current="page">Contáctanos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
-    <section class="hero-section contact-hero">
-        <div class="hero-content container">
-            <h1>Contacta con Nosotros</h1>
-            <p>Estamos listos para hacer realidad tu proyecto.</p>
-        </div>
-    </section>
-
-    <section class="contact-form-section container">
-        <div class="form-wrapper">
-            <h2>Envíanos un mensaje</h2>
-            <p class="form-subtitle">Rellena el formulario y te responderemos a la brevedad posible.</p>
-            
-            <form action="https://formspree.io/f/xgopbeor" method="post" class="contact-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="099 123 4567" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Tu Mensaje (Opcional)</label>
-                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="main-footer">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <h4>DAFOR</h4>
-                <p>Tu socio de confianza en edificación.</p>
+    <main>
+        <section class="hero page-hero">
+            <div class="hero-bg" role="img" aria-label="Vista aérea del Parque La Carolina, Quito"></div>
+            <div class="container hero-content">
+                <nav class="breadcrumb reveal" aria-label="Ruta"><a href="index.html">Inicio</a><span>/</span><span>Contacto</span></nav>
+                <h1 class="reveal" data-delay="1">Hablemos de tu <span>proyecto</span></h1>
+                <p class="lead reveal" data-delay="2">Ya sea que quieras comprar en uno de nuestros proyectos o construir en tu terreno, estamos listos para ayudarte.</p>
             </div>
-            <div class="footer-contact">
+        </section>
+
+        <section>
+            <div class="container contact-grid">
+                <div class="contact-info reveal">
+                    <span class="eyebrow">Contacto directo</span>
+                    <h2 class="section-title">Estamos para <span>ayudarte</span></h2>
+                    <p>Elige el canal que prefieras. Si nos escribes por WhatsApp, la respuesta suele ser inmediata.</p>
+                    <div class="info-list">
+                        <a class="info-item" href="https://wa.me/593999496255?text=Hola%2C%20tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construcciones" target="_blank" rel="noopener">
+                            <span class="info-icon"><i class="fab fa-whatsapp"></i></span>
+                            <span><small>WhatsApp</small><strong>+593 99 949 6255</strong></span>
+                        </a>
+                        <a class="info-item" href="tel:+593999496255">
+                            <span class="info-icon"><i class="fas fa-phone"></i></span>
+                            <span><small>Teléfono</small><strong>+593 99 949 6255</strong></span>
+                        </a>
+                        <a class="info-item" href="mailto:alejandrod@dafor.com.ec">
+                            <span class="info-icon"><i class="fas fa-envelope"></i></span>
+                            <span><small>Correo electrónico</small><strong>alejandrod@dafor.com.ec</strong></span>
+                        </a>
+                        <div class="info-item">
+                            <span class="info-icon"><i class="fas fa-location-dot"></i></span>
+                            <span><small>Ubicación</small><strong>Quito, Ecuador</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card reveal" data-delay="1">
+                    <h3>Envíanos un mensaje</h3>
+                    <p>Completa el formulario y un asesor te contactará a la brevedad posible.</p>
+                    <form action="https://formspree.io/f/xgopbeor" method="POST" id="contact-form" novalidate>
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde dafor.com.ec">
+                        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" autocomplete="name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" autocomplete="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="099 123 4567" autocomplete="tel" pattern="[0-9+ ()-]{7,20}" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="interes">¿En qué estás interesado?</label>
+                            <select id="interes" name="interes">
+                                <option value="Comprar en un proyecto DAFOR">Comprar en un proyecto DAFOR</option>
+                                <option value="Construir en mi terreno">Construir en mi terreno</option>
+                                <option value="Invertir en un proyecto">Invertir en un proyecto</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Tu mensaje <em>(opcional)</em></label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos qué buscas: tipo de vivienda, ubicación del terreno, presupuesto..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensaje <i class="fas fa-arrow-right"></i></button>
+                        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+                        <p class="form-note"><i class="fas fa-lock"></i> Tus datos se usan solo para responder a tu consulta.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-wrap">
+            <div class="container reveal">
+                <iframe title="Mapa de Quito, Ecuador" src="https://www.google.com/maps?q=Quito,+Ecuador&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="images/logo-blanco.png" alt="DAFOR Inversiones y Construcciones">
+                <p>Proyectos inmobiliarios propios y construcción en tu terreno, en Quito, Ecuador.</p>
+            </div>
+            <div>
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="contacto.html?interes=comprar" data-proyectos-link>Proyectos</a></li>
+                    <li><a href="index.html#valores">Valores</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
                 <h4>Contacto</h4>
-                <p><i class="fas fa-phone"></i> +593 99 949 6255</p>
-                <p><i class="fas fa-envelope"></i> alejandrod@dafor.com.ec</p>
-                <p><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</p>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i><a href="tel:+593999496255">+593 99 949 6255</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:alejandrod@dafor.com.ec">alejandrod@dafor.com.ec</a></li>
+                    <li><i class="fas fa-location-dot"></i><span>Quito, Ecuador</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <div class="social">
+                    <a href="https://www.linkedin.com/company/dafor" target="_blank" rel="noopener" aria-label="LinkedIn de DAFOR"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/dafor.ec" target="_blank" rel="noopener" aria-label="Facebook de DAFOR"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/dafor.ec" target="_blank" rel="noopener" aria-label="Instagram de DAFOR"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 DAFOR. Todos los derechos reservados.</p>
+        <div class="container footer-bottom">
+            <p>&copy; <span data-year>2026</span> DAFOR Inversiones y Construcciones. Todos los derechos reservados.</p>
+            <p>Quito, Ecuador</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/593999496255?text=Hola,Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construciones" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
+    <a href="https://wa.me/593999496255?text=Hola%2C%20tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construcciones" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        function toggleMenuIzquierdo() {
-            var menu = document.getElementById('nav-menu');
-            menu.classList.toggle('menu-abierto');
-        }
-    </script>
+    <script src="js/proyectos-data.js?v=3.3"></script>
+    <script src="js/script.js?v=3.3"></script>
 </body>
 </html>

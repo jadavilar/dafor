@@ -1,156 +1,298 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>DAFOR - Inversiones y Construcciones en Quito</title>
-    <meta name="description" content="DAFOR es tu socio de confianza en inversiones y construcción en Quito, Ecuador. Más de 30 años construyendo el futuro con calidad, responsabilidad y sostenibilidad.">
-    <meta name="keywords" content="construcción, inversiones, inmobiliaria, proyectos, edificación, DAFOR, Quito, Ecuador">
+
+    <title>DAFOR | Inversiones y Construcciones en Quito, Ecuador</title>
+    <meta name="description" content="DAFOR, inversiones y construcciones en Quito, Ecuador. Vendemos proyectos de vivienda propios y construimos en tu terreno. Más de 40 años de trayectoria.">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0F223A">
+    <link rel="canonical" href="https://dafor.com.ec/">
 
-    <link rel="canonical" href="https://dafor.com.ec/" />
-
-    <meta property="og:title" content="DAFOR - Inversiones y Construcciones">
-    <meta property="og:description" content="Construyendo el futuro, hoy. Calidad y responsabilidad en cada obra.">
+    <meta property="og:locale" content="es_EC">
     <meta property="og:type" content="website">
-    
-    <meta property="og:url" content="https://dafor.com.ec/"> 
-    <meta property="og:image" content="https://dafor.com.ec/imagen-whatsapp.jpg"> 
+    <meta property="og:site_name" content="DAFOR">
+    <meta property="og:title" content="DAFOR | Inversiones y Construcciones">
+    <meta property="og:description" content="Construyendo el futuro, hoy. Calidad y responsabilidad en cada obra.">
+    <meta property="og:url" content="https://dafor.com.ec/">
+    <meta property="og:image" content="https://dafor.com.ec/images/imagen-whatsapp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <link rel="stylesheet" href="style.css?v=FINAL">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=3.3">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "GeneralContractor",
+        "name": "DAFOR Inversiones y Construcciones",
+        "url": "https://dafor.com.ec/",
+        "logo": "https://dafor.com.ec/images/logo-banner.png",
+        "image": "https://dafor.com.ec/images/imagen-whatsapp.jpg",
+        "telephone": "+593999496255",
+        "email": "alejandrod@dafor.com.ec",
+        "address": { "@type": "PostalAddress", "addressLocality": "Quito", "addressCountry": "EC" },
+        "areaServed": "Quito, Ecuador",
+        "sameAs": [
+            "https://www.linkedin.com/company/dafor",
+            "https://www.facebook.com/dafor.ec",
+            "https://www.instagram.com/dafor.ec"
+        ]
+    }
+    </script>
 </head>
-<body>
+<body class="home">
 
-    <header class="main-header" id="navbar">
-        <div class="container header-container">
-            <div class="logo-area">
-                <img src="logo-menu.png" alt="DAFOR Logo" class="logo-img">
-            </div>
-            
-            <button class="menu-toggle" onclick="toggleMenuIzquierdo()">
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="DAFOR, ir al inicio">
+                <img src="images/logo-mark.png" alt="" width="395" height="469">
+                <span class="brand-text">
+                    <span class="brand-name">DAFOR</span>
+                    <span class="brand-sub">Inversiones y Construcciones</span>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
                 <i class="fas fa-bars"></i>
             </button>
-            
-            <nav class="main-nav" id="nav-menu">
-                <div class="close-menu" onclick="toggleMenuIzquierdo()">
-                    <i class="fas fa-times"></i>
+
+            <nav class="main-nav" id="main-nav" aria-label="Menú principal">
+                <div class="nav-head">
+                    <img src="images/logo-mark.png" alt="DAFOR">
+                    <button class="menu-close" id="menu-close" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
                 </div>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="contacto.html?interes=comprar" data-proyectos-link>Proyectos</a></li>
+                    <li><a href="#valores">Valores</a></li>
+                    <li><a href="#proceso">Proceso</a></li>
+                    <li><a href="contacto.html" class="btn btn-primary">Contáctanos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
-    <section class="hero-section">
-        <div class="hero-content container">
-            <img src="logo-banner.png" alt="DAFOR Construcciones" class="hero-logo">
-            <h1>Construyendo el futuro, hoy.</h1>
-        </div>
-        <div class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <section class="stats-section container">
-        <h2 class="section-title">Nuestra Trayectoria en Cifras</h2>
-        <div class="stats-layout">
-            <div class="stats-image-wrapper">
-                <img src="imagen-ciudad.jpg" alt="Proyectos DAFOR" class="city-img">
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero-bg" role="img" aria-label="Vista aérea del Parque La Carolina, Quito"></div>
+            <div class="container hero-content hero-brand">
+                <h1 class="hero-logo reveal">
+                    <img src="images/logo-hero.png" alt="DAFOR Inversiones y Construcciones" width="695" height="752">
+                </h1>
+                <span class="hero-divider reveal" data-delay="1"></span>
+                <p class="hero-slogan reveal" data-delay="1">Construyendo el <span>futuro</span>, hoy.</p>
+                <p class="lead reveal" data-delay="2">Desarrollamos y vendemos proyectos de vivienda propios, y construimos en tu terreno. Más de 40 años en Quito.</p>
             </div>
-            <div class="stats-content">
-                <div class="stats-grid-inline">
-                    <div class="stat-item">
-                        <span class="stat-number">+30</span>
-                        <span class="stat-text">Años Construyendo</span>
+            <div class="hero-stats">
+                <div class="container hero-stats-inner">
+                <div class="hero-stat"><strong data-count="40" data-prefix="+">+40</strong><span>Años<br>construyendo</span></div>
+                <div class="hero-stat"><strong data-count="15" data-prefix="+">+15</strong><span>Proyectos<br>entregados</span></div>
+                <div class="hero-stat"><strong data-count="530" data-prefix="+">+530</strong><span>Familias<br>felices</span></div>
+                </div>
+            </div>
+            <div class="scroll-cue" aria-hidden="true">Scroll</div>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section id="nosotros">
+            <div class="container about-grid">
+                <div class="about-media reveal">
+                    <div class="about-photo"><img src="images/imagen-nosotros.jpg" alt="Residencia moderna iluminada al anochecer" loading="lazy" width="1200" height="1600"></div>
+                    <div class="about-badge">
+                        <strong>40+</strong>
+                        <span>Años de<br>experiencia</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">+15</span>
-                        <span class="stat-text">Proyectos Entregados</span>
+                </div>
+                <div class="about-text reveal" data-delay="1">
+                    <span class="eyebrow">Quiénes somos</span>
+                    <h2 class="section-title">Tu socio de confianza en <span>edificación</span></h2>
+                    <p>En Inversiones y Construcciones DAFOR desarrollamos y vendemos proyectos inmobiliarios, y también construimos para quienes tienen un terreno y quieren hacer realidad su proyecto.</p>
+                    <p>Combinamos la experiencia constructiva con una visión de inversión para crear espacios que generan valor real: bien construidos, entregados a tiempo y pensados para durar.</p>
+                                        <ul class="check-list">
+                        <li><i class="fas fa-check"></i> Proyectos propios en venta</li>
+                        <li><i class="fas fa-check"></i> Construcción en tu terreno</li>
+                        <li><i class="fas fa-check"></i> Materiales de primera y acabados de calidad</li>
+                        <li><i class="fas fa-check"></i> Cumplimiento estricto de plazos y normativas</li>
+                                            </ul>
+                    <a href="contacto.html" class="btn btn-dark">Hablemos de tu proyecto <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section class="services" id="servicios">
+            <div class="container">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">Qué hacemos</span>
+                    <h2 class="section-title">Compra o construye con <span>DAFOR</span></h2>
+                    <p class="section-lead">Compra tu vivienda en uno de nuestros proyectos o construye con nosotros en tu propio terreno.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card reveal">
+                        <span class="service-num">01</span>
+                        <div class="service-icon"><i class="fas fa-building"></i></div>
+                        <span class="service-tag">Compra o invierte</span>
+                        <h3>Proyectos propios en venta</h3>
+                        <p>Desarrollamos y vendemos nuestros propios proyectos de vivienda en Quito. Compra tu nuevo hogar o invierte con la confianza de una constructora con más de 40 años de trayectoria.</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Viviendas en ubicaciones estratégicas</li>
+                            <li><i class="fas fa-check"></i> Acabados de calidad y entrega garantizada</li>
+                            <li><i class="fas fa-check"></i> Excelente opción de inversión y plusvalía</li>
+                        </ul>
+                        <a href="contacto.html?interes=comprar" class="btn btn-dark" data-proyectos-link>Ver disponibilidad <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="service-card reveal" data-delay="1">
+                        <span class="service-num">02</span>
+                        <div class="service-icon"><i class="fas fa-trowel-bricks"></i></div>
+                        <span class="service-tag">Construimos para ti</span>
+                        <h3>Construcción en tu terreno</h3>
+                        <p>¿Tienes un terreno y quieres construir? Nos encargamos de todo: diseño, planificación, presupuesto y construcción, hasta entregarte tu proyecto listo.</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Diseño y planificación a tu medida</li>
+                            <li><i class="fas fa-check"></i> Presupuesto claro y cronograma definido</li>
+                            <li><i class="fas fa-check"></i> Dirección técnica y obra llave en mano</li>
+                        </ul>
+                        <a href="contacto.html?interes=construir" class="btn btn-primary">Cotiza tu construcción <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALORES -->
+        <section class="values" id="valores">
+            <div class="container">
+                <div class="section-head center reveal">
+                    <span class="eyebrow light">Nuestra esencia</span>
+                    <h2 class="section-title">Valores que nos definen</h2>
+                    <p class="section-lead">Los principios que guían cada decisión y cada obra que entregamos.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card reveal">
+                        <i class="fas fa-award"></i>
+                        <h3>Calidad</h3>
+                        <p>Utilizamos los mejores materiales y técnicas vanguardistas para garantizar acabados impecables y duraderos en cada obra.</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">+500</span>
-                        <span class="stat-text">Familias Felices</span>
+                    <div class="value-card reveal" data-delay="1">
+                        <i class="fas fa-helmet-safety"></i>
+                        <h3>Responsabilidad</h3>
+                        <p>Cumplimos estrictamente con los plazos de entrega y las normativas de seguridad, priorizando la confianza de nuestros clientes.</p>
+                    </div>
+                    <div class="value-card reveal" data-delay="2">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Sostenibilidad</h3>
+                        <p>Integramos prácticas eco-amigables y soluciones energéticamente eficientes para reducir el impacto ambiental.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="values-section container">
-        <h2 class="section-title">Nuestros Valores Fundamentales</h2>
-        <div class="values-grid">
-            <div class="value-item text-center">
-                <div class="value-icon"><i class="fas fa-award"></i></div>
-                <h3>Calidad</h3>
-                <p>Utilizamos los mejores materiales y técnicas vanguardistas para garantizar acabados impecables y duraderos en cada obra.</p>
+        <!-- PROCESO -->
+        <section id="proceso">
+            <div class="container">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">Cómo trabajamos</span>
+                    <h2 class="section-title">Un proceso <span>claro</span> de inicio a fin</h2>
+                </div>
+                <div class="process-grid">
+                    <div class="step reveal">
+                        <div class="step-num">01</div>
+                        <h3>Asesoría</h3>
+                        <p>Te ayudamos a elegir tu vivienda en uno de nuestros proyectos o evaluamos tu terreno.</p>
+                    </div>
+                    <div class="step reveal" data-delay="1">
+                        <div class="step-num">02</div>
+                        <h3>Propuesta</h3>
+                        <p>Te presentamos opciones, presupuesto y cronograma con total transparencia.</p>
+                    </div>
+                    <div class="step reveal" data-delay="2">
+                        <div class="step-num">03</div>
+                        <h3>Construcción</h3>
+                        <p>Construimos con supervisión técnica y reportes de avance.</p>
+                    </div>
+                    <div class="step reveal" data-delay="3">
+                        <div class="step-num">04</div>
+                        <h3>Entrega</h3>
+                        <p>Entregamos a tiempo y te acompañamos también después de la entrega.</p>
+                    </div>
+                </div>
             </div>
-            <div class="value-item text-center">
-                <div class="value-icon"><i class="fas fa-hard-hat"></i></div>
-                <h3>Responsabilidad</h3>
-                <p>Cumplimos estrictamente con los plazos de entrega y las normativas de seguridad, priorizando la confianza de nuestros clientes.</p>
-            </div>
-            <div class="value-item text-center">
-                <div class="value-icon"><i class="fas fa-leaf"></i></div>
-                <h3>Sostenibilidad</h3>
-                <p>Integramos prácticas eco-amigables y soluciones eficientes energéticamente para reducir el impacto ambiental.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="social-section">
-        <div class="container text-center">
-            <h3>Síguenos en nuestras redes</h3>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/company/dafor" target="_blank" class="social-icon li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.facebook.com/dafor.ec" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/dafor.ec?igsh=MTJxYWJqbnB0YXl4aA%3D%3D&utm_source=qr" target="_blank" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box reveal">
+                    <div>
+                        <span class="eyebrow light">¿Listo para empezar?</span>
+                        <h2>Hagamos realidad tu próximo proyecto</h2>
+                        <p>Pregunta por nuestros proyectos en venta o cotiza la construcción en tu terreno.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="contacto.html" class="btn btn-primary">Escríbenos <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://wa.me/593999496255?text=Hola%2C%20tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construcciones" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="main-footer">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <h4>DAFOR</h4>
-                <p>Tu socio de confianza en edificación.</p>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="images/logo-blanco.png" alt="DAFOR Inversiones y Construcciones">
+                <p>Proyectos inmobiliarios propios y construcción en tu terreno, en Quito, Ecuador.</p>
             </div>
-            <div class="footer-contact">
+            <div>
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="contacto.html?interes=comprar" data-proyectos-link>Proyectos</a></li>
+                    <li><a href="#valores">Valores</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
                 <h4>Contacto</h4>
-                <p><i class="fas fa-phone"></i> +593 99 949 6255</p>
-                <p><i class="fas fa-envelope"></i> alejandrod@dafor.com.ec</p>
-                <p><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</p>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i><a href="tel:+593999496255">+593 99 949 6255</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:alejandrod@dafor.com.ec">alejandrod@dafor.com.ec</a></li>
+                    <li><i class="fas fa-location-dot"></i><span>Quito, Ecuador</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <div class="social">
+                    <a href="https://www.linkedin.com/company/dafor" target="_blank" rel="noopener" aria-label="LinkedIn de DAFOR"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/dafor.ec" target="_blank" rel="noopener" aria-label="Facebook de DAFOR"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/dafor.ec" target="_blank" rel="noopener" aria-label="Instagram de DAFOR"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 DAFOR. Todos los derechos reservados.</p>
+        <div class="container footer-bottom">
+            <p>&copy; <span data-year>2026</span> DAFOR Inversiones y Construcciones. Todos los derechos reservados.</p>
+            <p>Quito, Ecuador</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/593999496255?text=Hola,Tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construciones" class="whatsapp-float" target="_blank" aria-label="Escríbenos por WhatsApp">
+    <a href="https://wa.me/593999496255?text=Hola%2C%20tengo%20inter%C3%A9s%20en%20los%20proyectos%20de%20DAFOR%20-%20Inversiones%20y%20Construcciones" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // LÓGICA QUE DESLIZA EL MENÚ
-        function toggleMenuIzquierdo() {
-            var menu = document.getElementById('nav-menu');
-            menu.classList.toggle('menu-abierto');
-        }
-    </script>
+    <script src="js/proyectos-data.js?v=3.3"></script>
+    <script src="js/script.js?v=3.3"></script>
 </body>
 </html>
