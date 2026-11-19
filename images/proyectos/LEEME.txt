@@ -1,0 +1,7 @@
+Coloca en esta carpeta las fotos de los proyectos (formato JPG, horizontal, mínimo 1200 px de ancho).
+Ejemplo: images/proyectos/edificio-carolina.jpg
+
+Luego agrega el proyecto en el archivo js/proyectos-data.js.
+Al agregar el primer proyecto:
+  - El menú "Proyectos" y el botón "Ver disponibilidad" llevarán automáticamente a proyectos.html.
+  - En proyectos.html cambia  <meta name="robots" content="noindex, follow">  por  content="index, follow"  para que Google la muestre.

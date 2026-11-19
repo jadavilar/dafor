@@ -1,0 +1,22 @@
+SITIO WEB DAFOR — ESTRUCTURA DE CARPETAS
+=========================================
+
+index.html          Página de inicio
+contacto.html       Página de contacto (formulario Formspree)
+proyectos.html      Página de proyectos en venta
+favicon.ico         Ícono del sitio (debe quedarse en la raíz)
+
+css/
+  style.css         Todos los estilos del sitio
+
+js/
+  script.js         Menú, animaciones, formulario
+  proyectos.js      Muestra las tarjetas de proyectos
+  proyectos-data.js LISTA DE PROYECTOS (este es el archivo que se edita para agregar proyectos)
+
+images/
+  favicon (favicon-32.png, apple-touch-icon.png), logos, fotos del sitio
+  imagen-whatsapp.jpg   (imagen que aparece al compartir el enlace en WhatsApp/redes)
+  proyectos/            Fotos de cada proyecto (ver LEEME.txt dentro)
+
+Al subir al servidor: las páginas .html van en la raíz, junto a las carpetas css, js e images.
